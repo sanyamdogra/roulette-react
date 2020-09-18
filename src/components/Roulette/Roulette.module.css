@@ -1,6 +1,5 @@
 :root {
   --PI: 3.14159265358979;
-  --nb-item: 0; /* total number of items in wheel */
   --item-nb: 0; /* instantaneous item number */
   --selected-item: 0;
   --nb-turn: 5; /* number of revolutions required */
@@ -89,7 +88,7 @@
   cursor: pointer;
 }
 
-@keyframes spin {
+/* @keyframes spin {
   from {
     transform: rotate(0deg);
   }
@@ -104,4 +103,4 @@
   to {
     transform: rotate(25deg);
   }
-}
+} */

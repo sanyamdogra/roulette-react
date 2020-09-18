@@ -35,7 +35,7 @@ const Roulette = () => {
   const [selected, setSelected] = useState(null);
   const spinning = selected !== null ? `${styles.spinning}` : "";
   const wheelVars = {
-    "--nb-item": 8, // number of items
+    "--nb-item": labels.length, // number of items
     "--selected-item": selected, // index of the selected item
   };
   const selectItem = async () => {
