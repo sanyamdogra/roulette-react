@@ -13,6 +13,7 @@
   background-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0px 3.16862px 6.33724px rgba(0, 0, 0, 0.12);
   margin: 1em;
+  margin-top: 4em;
   border-radius: 50%;
   height: 270px;
   width: 270px;
@@ -104,3 +105,21 @@
     transform: rotate(25deg);
   }
 } */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin-top: 3em;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .container {
+    height: 240px;
+    width: 240px;
+    margin-top: 1em;
+  }
+  .containerRotate {
+    height: 220px;
+    width: 220px;
+  }
+}

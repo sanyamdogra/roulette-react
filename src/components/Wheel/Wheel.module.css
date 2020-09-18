@@ -1,5 +1,5 @@
 .container {
-  width: auto;
+  /* width: auto; */
   text-align: left;
 }
 
@@ -69,7 +69,6 @@ li:nth-child(8) {
   /* border: 1px solid black; */
   position: relative;
   padding: 0;
-  margin: 1em auto;
   border-radius: 50%;
   list-style: none;
   overflow: hidden;
@@ -96,4 +95,11 @@ li {
   transform: skewY(45deg) rotate(20deg);
   padding-top: 20px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 330px) {
+  .circle {
+    height: 220px;
+    width: 220px;
+  }
 }

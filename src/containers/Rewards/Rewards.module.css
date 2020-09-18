@@ -4,10 +4,11 @@
   flex-direction: column;
 }
 
-.infoWrapper{
-    margin-top: 2em;
-    /* position: absolute;
+.infoWrapper {
+  margin-top: 2em;
+  /* position: absolute;
     bottom: 10%; */
+    min-width: 25vw;
 }
 .supportLabel {
   font-size: 14px;
@@ -18,4 +19,18 @@
 .helpAction {
   color: #fbaf03;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .infoWrapper {
+    width: 95vw;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .infoWrapper {
+    margin-top: 0em;
+  }
+  .supportLabel {
+    bottom: 3%;
+  }
 }
