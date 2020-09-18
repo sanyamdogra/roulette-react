@@ -3,6 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f10938a4-c29a-4906-ab33-7930de3b180d/deploy-status)](https://app.netlify.com/sites/roulette-react/deploys)
 
 A web app that allows the user to spin by tapping ‘Spin’and get the reward mentioned on the segment of wheel where it stops.
+
 Deployment link - http://roulette-react.netlify.app/
 
 ### Technologies used
@@ -16,4 +17,6 @@ Deployment link - http://roulette-react.netlify.app/
 * `yarn start`
 * Open http://localhost:3000 to view it in the browser.
 
-###  Screenshots
+###  Screenshot
+
+<img src="https://github.com/sanyamdogra/roulette-react/blob/master/iphone-image.png?raw=true" height="540">
