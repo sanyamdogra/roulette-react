@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Metropolis Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Regular'),
+    url('./fonts/Metropolis-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Medium'),
+    url('./fonts/Metropolis-Medium.woff') format('woff');
+}
+
+/* @font-face {
+  font-family: 'Metropolis Semi Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Semi Bold'),
+    url('./fonts/Metropolis-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Metropolis Bold'),
+    url('./fonts/Metropolis-Bold.woff') format('woff');
+} */
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #e5e5e5;
+  font-family: 'Metropolis Medium';
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

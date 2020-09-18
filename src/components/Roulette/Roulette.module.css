@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 3.16862px 6.33724px rgba(0, 0, 0, 0.12);
+  margin: 1em;
+  border-radius: 50%;
+  height: 270px;
+  width: 270px;
+  /* animation:spin infinite 20s linear; */
+  position: relative;
+}
+.containerRotate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #832a4b;
+  border-radius: 50%;
+  height: 255px;
+  width: 255px;
+  /* animation:spin infinite 20s linear; */
+  position: relative;
+}
+.clasp {
+  position: absolute;
+  z-index: 5;
+  top: -5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.5);
+}
+.claspTriangle {
+  position: absolute;
+  top: 10%;
+}
+.startButtonWrapper {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #ffdda1;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.startButton {
+  background-color: #ffdda1;
+  color: rgba(0, 0, 0, 0.87);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: 'Metropolis Medium'; */
+  font-weight: 600;
+  box-shadow: 0px 3.74199px 3.74199px rgba(89, 57, 0, 0.25);
+  cursor: pointer;
+}
+.sliceOne {
+  transform: rotate(60deg);
+
+  bottom: 0;
+  right: 0;
+}
+.sliceTwo {
+  transform: rotate(130deg);
+
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.sliceThree {
+  transform: rotate(-50deg);
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

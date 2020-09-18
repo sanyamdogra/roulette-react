@@ -1,0 +1,27 @@
+.container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  min-height: 20vh;
+  border-radius: 10px;
+  margin: 1em;
+}
+.heading {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 24px;
+}
+.content {
+  padding: 1em;
+}
+.subHeading {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.58);
+  margin-top: 1em;
+  font-family: 'Metropolis Regular';
+  line-height: 18px;
+}

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoWrapper{
+    margin-top: 2em;
+}
+.supportLabel {
+  font-size: 14px;
+  font-weight: 500;
+  /* position: absolute;
+  bottom: 5%; */
+}
+.helpAction {
+  color: #fbaf03;
+  cursor: pointer;
+}

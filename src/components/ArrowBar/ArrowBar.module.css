@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.threshold {
+  background-color: black;
+  height: 18.5px;
+  width: 2px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0%;
+  left: 40%;
+}
