@@ -1,83 +1,20 @@
 import React from "react";
 import styles from "./Wheel.module.css";
 
-const Wheel = () => {
+
+const Wheel = (props) => {
+  const displaySlices = () =>
+    props.items.map((item, index) => (
+      <li>
+        <div className={styles.text} style={{ '--item-nb': index }}>
+          {item.value}
+        </div>
+      </li>
+    ));
+
   return (
     <div className={styles.container}>
-      <ul className={styles.circle}>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            ₹50
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            ₹20
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            1.5x
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            2x
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            ₹100
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            1.5x
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            2x
-          </div>
-        </li>
-        <li>
-          <div
-            className={styles.text}
-            contentEditable="true"
-            spellCheck="false"
-          >
-            F
-          </div>
-        </li>
-      </ul>
+      <ul className={styles.circle}>{displaySlices()}</ul>
     </div>
   );
 };

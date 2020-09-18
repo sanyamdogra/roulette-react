@@ -6,12 +6,14 @@
 
 .infoWrapper{
     margin-top: 2em;
+    /* position: absolute;
+    bottom: 10%; */
 }
 .supportLabel {
   font-size: 14px;
   font-weight: 500;
-  /* position: absolute;
-  bottom: 5%; */
+  position: absolute;
+  bottom: 5%;
 }
 .helpAction {
   color: #fbaf03;

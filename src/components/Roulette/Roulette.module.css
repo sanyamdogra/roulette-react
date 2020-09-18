@@ -1,3 +1,12 @@
+:root {
+  --PI: 3.14159265358979;
+  --nb-item: 0; /* total number of items in wheel */
+  --item-nb: 0; /* instantaneous item number */
+  --selected-item: 0;
+  --nb-turn: 5; /* number of revolutions required */
+  --spinning-duration: 6s;
+  --reset-duration: 0.2s;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -11,9 +20,19 @@
   /* animation:spin infinite 20s linear; */
   position: relative;
 }
-.rotate{
-   animation:spin infinite 3s linear;
-   transform: rotate(-22.5deg);
+.rotate {
+  transition: transform var(--reset-duration);
+  /* animation: spin infinite 2s linear; */
+}
+
+.spinning {
+  transition: transform var(--spinning-duration);
+  transform: rotate(
+    calc(
+      var(--nb-turn) * 360deg +
+        (-360deg * var(--selected-item) / var(--nb-item, 1))
+    )
+  );
 }
 .containerRotate {
   display: flex;
@@ -34,9 +53,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: scale(1.5) ;
+  transform: scale(1.5);
   /* transform: rotate(45deg); */
-   /* animation:clipMotion infinite 0.5s linear; */
+  /* animation:clipMotion infinite 0.5s linear; */
 }
 .claspTriangle {
   position: absolute;
@@ -68,26 +87,6 @@
   font-weight: 600;
   box-shadow: 0px 3.74199px 3.74199px rgba(89, 57, 0, 0.25);
   cursor: pointer;
-}
-.sliceOne {
-  transform: rotate(60deg);
-
-  bottom: 0;
-  right: 0;
-}
-.sliceTwo {
-  transform: rotate(130deg);
-
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-.sliceThree {
-  transform: rotate(-50deg);
-
-  top: 0;
-  bottom: 0;
-  right: 0;
 }
 
 @keyframes spin {
