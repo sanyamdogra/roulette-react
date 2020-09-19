@@ -3,7 +3,9 @@ import styles from "./Roulette.module.css";
 import { ReactComponent as Triangle } from "../../assets/lightArrowDown.svg";
 import { ReactComponent as Rectangle } from "../../assets/lightRectangle.svg";
 import Wheel from "../Wheel/Wheel";
+import { appendSpreadsheet } from "../../services/addToSheets";
 
+// Labels for the wheel
 const labels = [
   {
     value: "₹50",
@@ -33,16 +35,28 @@ const labels = [
 
 const Roulette = () => {
   const [selected, setSelected] = useState(null);
-  const spinning = selected !== null ? `${styles.spinning}` : "";
+  const timeElapsed = Date.now();
+  const today = new Date(timeElapsed);
+
+  const spinning = selected !== null ? `${styles.spinning}` : ""; // To toggle spinning class
+
+  // Wheel variables
   const wheelVars = {
     "--nb-item": labels.length, // number of items
     "--selected-item": selected, // index of the selected item
   };
+
+  // To select a particular slice from the wheel and post to Google Sheets
   const selectItem = async () => {
     if (selected == null) {
       const selectedItem = Math.floor(Math.random() * labels.length); //add items.length
-      console.log(selectedItem);
+      const newRow = {
+        web_client: "mobile-pwa", //mobile client
+        time_stamp: today.toISOString(), //To convert to ISO format
+        spin_result_index: selectedItem + 1, // To return the selected slice
+      };
       await setSelected(selectedItem);
+      appendSpreadsheet(newRow); //add in the spreadsheet
     } else {
       await setSelected(null);
       setTimeout(() => {
@@ -50,6 +64,8 @@ const Roulette = () => {
       }, 500);
     }
   };
+
+  // CLASP COMPONENT
   const Clasp = () => {
     return (
       <div className={styles.clasp}>

@@ -5,7 +5,7 @@ import styles from "./Wheel.module.css";
 const Wheel = (props) => {
   const displaySlices = () =>
     props.items.map((item, index) => (
-      <li>
+      <li key={index}>
         <div className={styles.text} style={{ '--item-nb': index }}>
           {item.value}
         </div>
