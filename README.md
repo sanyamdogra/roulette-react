@@ -4,7 +4,11 @@
 
 A web app that allows the user to spin by tapping ‘Spin’and get the reward mentioned on the segment of wheel where it stops.
 
-Deployment link - http://roulette-react.netlify.app/
+Store the variables `web_client`, `time_stamp`(in ISO format), and `spin_result_index` in the Google Spreadsheet.
+
+* Deployment link - http://roulette-react.netlify.app/
+
+* Google Sheets link - https://docs.google.com/spreadsheets/d/1uihX8o9pdd_xGP6jbYEeD9MSB0_rJowiWsP41QDd_1o/edit?usp=sharing
 
 ### Technologies used
 * React JS
